@@ -986,6 +986,9 @@ footer {
 .foot-copy { font-size: .78rem; color: var(--t400); }
 .foot-copy + .foot-copy { margin-top: .2rem; font-size: .72rem; }
 
+.foot-copy a { color: var(--b400); transition: .2s; }
+.foot-copy a:hover { color: var(--b500); }
+
 /* ── Responsive ──────────────────────────────────── */
 @media (max-width: 1024px) {
   .stats-row { flex-wrap: wrap; }
