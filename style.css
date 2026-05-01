@@ -226,14 +226,17 @@ button { cursor: pointer; font-family: var(--body); }
 
 .drawer-logo {
   font-family: var(--head);
-  font-size: .85rem;
-  font-weight: 800;
-  color: var(--t900);
   margin-bottom: 1.5rem;
   padding-bottom: 1.2rem;
   border-bottom: 1px solid var(--border);
 }
-.drawer-logo span { color: var(--b600); }
+.drawer-logo .logo-symbol {
+  width: 42px;
+  height: 42px;
+}
+.drawer-logo .logo-wordmark {
+  width: 165px;
+}
 
 .drawer a {
   font-family: var(--body);
@@ -280,25 +283,38 @@ button { cursor: pointer; font-family: var(--body); }
 }
 
 /* Logo */
-.logo { display: flex; align-items: center; gap: .65rem; }
-.logo-mark {
-  width: 38px;
-  height: 38px;
-  background: var(--b600);
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  font-size: 1.15rem;
-  flex-shrink: 0;
+.logo,
+.drawer-logo,
+.foot-logo {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  text-decoration: none;
 }
+.logo-symbol {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 50%;
+}
+
 .logo-text {
   font-family: var(--head);
-  font-size: .95rem;
+  font-size: 1.2rem;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--t900);
+  color: white;
 }
 .logo-text span { color: var(--b600); display: block; }
+
+.logo-wordmark {
+  width: clamp(150px, 18vw, 220px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
 /* Nav links */
 .nav-list {
@@ -326,9 +342,6 @@ button { cursor: pointer; font-family: var(--body); }
 .nav-list a:hover { color: var(--b700); }
 .nav-list a:hover::after { width: 100%; }
 
-/* Navbar when transparent (over hero) */
-.navbar:not(.solid) .logo-text { color: #fff; }
-.navbar:not(.solid) .logo-text span { color: var(--b200); }
 .navbar:not(.solid) .nav-list a { color: rgba(255,255,255,.8); }
 .navbar:not(.solid) .nav-list a:hover { color: #fff; }
 .navbar:not(.solid) .nav-list a::after { background: #fff; }
@@ -981,8 +994,14 @@ footer {
   text-align: center;
   border-top: 1px solid rgba(255,255,255,.06);
 }
-.foot-logo { font-family: var(--head); font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: .4rem; }
-.foot-logo span { color: var(--b400); }
+.foot-logo { margin-bottom: .4rem; }
+.foot-logo .logo-symbol {
+  width: 38px;
+  height: 38px;
+}
+.foot-logo .logo-wordmark {
+  width: 155px;
+}
 .foot-copy { font-size: .78rem; color: var(--t400); }
 .foot-copy + .foot-copy { margin-top: .2rem; font-size: .72rem; }
 
