@@ -309,6 +309,8 @@ button { cursor: pointer; font-family: var(--body); }
 }
 .logo-text span { color: var(--b600); display: block; }
 
+.navbar.solid .logo-text { color: var(--t900); }
+
 .logo-wordmark {
   width: clamp(150px, 18vw, 220px);
   height: auto;
